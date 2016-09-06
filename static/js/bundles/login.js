@@ -1,3 +1,5 @@
-import Map from "esri/map";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import LoginApp from '../components/Login.jsx';
 
-var map = new Map("content", {basemap: "streets"});
+ReactDOM.render(<LoginApp />, document.getElementById('myLogin'));
