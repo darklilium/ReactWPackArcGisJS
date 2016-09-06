@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "test": "karma start --single-run",
-    "start": "start npm run dev:server",
+    "start": "start npm run dev:server & webpack --config ./webpack.config.js",
     "dev:server": "webpack-dev-server"
   },
   "repository": {

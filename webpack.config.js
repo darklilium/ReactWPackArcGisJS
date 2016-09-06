@@ -1,17 +1,16 @@
 var webpack = require("webpack");
+var path = require('path');
 
 module.exports = {
     entry: {
-        main: [
-            './static/js/bundles/main.js' // entry point for your application code
-        ],
+        login: './static/js/bundles/login.js',
         vendor: [
             // put your third party libs here
         ]
     },
     output: {
-        filename: './dist/[name].bundle.js',
-        publicPath: './',
+        path: path.join(path.join(__dirname, 'dist'), 'js'),
+        filename: '[name].js',        
         libraryTarget: "amd"
     },
     resolve: {
