@@ -16,8 +16,15 @@ dist:
 
 Package.json: has some modules that maybe are unnecesary but i think they are really good to have for developing some form-apps.
 
-  
+
+
+
+
 ```
 npm install
 npm run start
 ```
+
+
+
+Specially thanks to : @lobsteropteryx and @tomwayson for all the help.
