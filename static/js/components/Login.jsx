@@ -7,20 +7,16 @@ class LoginApp extends React.Component {
 
   }
 
-  componentWillMount(){
+  componentDidMount(){
     var map = new Map("map_content", {basemap: "streets"});
   }
-
-
 
   render(){
     return (
         <div className="login_wrapper_content">
+        <h1>aa</h1>
           <div id="map_content"></div>
         </div>
-
-
-
     );
   }
 }

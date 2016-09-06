@@ -3,14 +3,15 @@ var path = require('path');
 
 module.exports = {
     entry: {
+        //put ur bundle files here.
         login: './static/js/bundles/login.js',
         vendor: [
-            // put your third party libs here
+        // put your third party libs here
         ]
     },
     output: {
         path: path.join(path.join(__dirname, 'dist'), 'js'),
-        filename: '[name].js',        
+        filename: '[name].js',
         libraryTarget: "amd"
     },
     resolve: {
@@ -21,7 +22,10 @@ module.exports = {
             // ES2015 files
             {
               test: /\.(js|jsx)$/,
-              loader: 'babel-loader'
+              loader: 'babel',
+              query: {
+                presets: ['react', 'es2015', 'stage-2']
+              }
             },
             // css
             {
