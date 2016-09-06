@@ -2,14 +2,24 @@
 <html>
     <head>
         <title>esri-webpack-demo</title>
-        <link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
+        <!-- CDN -->
+      <!--  <link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css"> -->
+        <!-- API Installed  in server -->
+        <link rel="stylesheet" type="text/css" href="arcgis_js_api/library/3.17/3.17/dijit/themes/tundra/tundra.css" />
+        <link rel="stylesheet" type="text/css" href="arcgis_js_api/library/3.17/3.17/esri/css/esri.css" />
+
+        <link rel="stylesheet" href="dist/css/login.css">
     </head>
 
     <body>
         <div id="myLogin"></div>
-        <script src="https://js.arcgis.com/3.16/" data-dojo-config="async: true"></script>
+          <!-- CDN -->
+        <!--  <script src="https://js.arcgis.com/3.16/" data-dojo-config="async: true"></script> -->
+          <!-- API Installed  in server -->
+          <script src="arcgis_js_api/library/3.17/3.17/init.js"></script>
         <script>
-            require(["/dist/js/vendor.js", "/dist/js/login.js"], function (vendor, login) {});
+            require(["vendor.js", "login.js"], function (vendor, login) {});
+            /* require(["dist/js/vendor.js", "dist/js/login.js"], function (vendor, login) {}); */
         </script>
     </body>
 </html>
